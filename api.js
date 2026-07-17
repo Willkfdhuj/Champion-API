@@ -14,7 +14,6 @@ app.get("/api/user/:id", (req, res) => {
     const economy = JSON.parse(
         fs.readFileSync("./data/economy.json", "utf8")
     );
-console.log("USERS FILE:", users);
     const user = economy[req.params.id];
 
     if (!user) {
