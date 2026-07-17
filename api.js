@@ -2,7 +2,6 @@ console.log("🔥 THIS IS THE CHAMPION API FILE");
 const express = require("express");
 const fs = require("fs");
 const cors = require("cors");
-const { Client, GatewayIntentBits } = require("discord.js");
 
 const app = express();
 
