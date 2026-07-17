@@ -12,7 +12,7 @@ app.use(express.json());
 const PORT = 3000;
 
 
-// Get user profile
+// Get user
 app.get("/api/user/:id", (req, res) => {
 
     const economy = JSON.parse(
@@ -61,7 +61,7 @@ app.get("/api/leaderboard", (req, res) => {
 });
 
 
-// Sync economy from Discord bot
+// Sync economy from bot
 app.post("/api/sync-economy", (req, res) => {
 
     fs.writeFileSync(
@@ -69,7 +69,23 @@ app.post("/api/sync-economy", (req, res) => {
         JSON.stringify(req.body, null, 2)
     );
 
-    console.log("✅ Economy synced from Discord bot");
+    console.log("✅ Economy synced");
+
+    res.json({
+        success: true
+    });
+});
+
+
+// Sync users from bot
+app.post("/api/sync-users", (req, res) => {
+
+    fs.writeFileSync(
+        "./data/users.json",
+        JSON.stringify(req.body, null, 2)
+    );
+
+    console.log("✅ Users synced");
 
     res.json({
         success: true
