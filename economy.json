@@ -1,0 +1,39 @@
+{
+  "1387299350023245826": {
+    "balance": 194,
+    "lastDaily": 1783919839272,
+    "monthlyCC": 562,
+    "casino": {
+      "gamesPlayed": 23,
+      "totalWagered": 14010832,
+      "profit": 69998068,
+      "biggestWin": 84000000
+    },
+    "crates": 1000
+  },
+  "1416821320578236507": {
+    "balance": 98,
+    "lastDaily": 0,
+    "monthlyCC": 94
+  },
+  "1378851224190717994": {
+    "balance": 4,
+    "lastDaily": 0,
+    "monthlyCC": null
+  },
+  "1291876177438314540": {
+    "balance": 104,
+    "lastDaily": 0,
+    "monthlyCC": 100
+  },
+  "1518115844649910363": {
+    "balance": 2,
+    "monthlyCC": 2,
+    "lastDaily": 0
+  },
+  "1525054337640960121": {
+    "balance": 16,
+    "monthlyCC": 16,
+    "lastDaily": 0
+  }
+}
