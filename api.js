@@ -1,6 +1,8 @@
+console.log("🔥 THIS IS THE CHAMPION API FILE");
 const express = require("express");
 const fs = require("fs");
 const cors = require("cors");
+const { Client, GatewayIntentBits } = require("discord.js");
 
 const app = express();
 
@@ -12,7 +14,7 @@ app.get("/api/user/:id", (req, res) => {
     const economy = JSON.parse(
         fs.readFileSync("./data/economy.json", "utf8")
     );
-
+console.log("USERS FILE:", users);
     const user = economy[req.params.id];
 
     if (!user) {
@@ -34,9 +36,14 @@ app.get("/api/leaderboard", (req, res) => {
         fs.readFileSync("./data/economy.json", "utf8")
     );
 
+    const users = JSON.parse(
+        fs.readFileSync("./data/users.json", "utf8")
+    );
+
     const leaderboard = Object.entries(economy)
         .map(([id, data]) => ({
             id: id,
+            username: users[id]?.username || "Unknown",
             balance: data.balance || 0,
             monthlyCC: data.monthlyCC || 0
         }))
